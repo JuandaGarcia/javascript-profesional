@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Scope</title>
+	</head>
+	<body>
+		<a href="/ejercicios/">Go back</a>
+		<p><em>Abre la consola</em></p>
+		<script>
+			//Global scope
+			var message = 'hello world'
+			//Function Scope let i
+			function printNumbers() {
+				for (let i = 0; i < 10; i++) {
+					setTimeout(() => {
+						console.log(i)
+					}, 100)
+				}
+			}
+			printNumbers()
+			//Module Scope
+		</script>
+	</body>
+</html>

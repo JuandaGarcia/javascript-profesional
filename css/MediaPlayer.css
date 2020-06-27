@@ -1,0 +1,19 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.MediaPlayer {
+	position: relative;
+}
+
+.MediaPlayer__controllers {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+.MediaPlayer__video {
+	vertical-align: top;
+}

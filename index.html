@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Media-Player</title>
+		<link rel="stylesheet" href="./css/MediaPlayer.css" />
+	</head>
+	<body>
+		<main>
+			<div class="MediaPlayer">
+				<video id="MediaPlayer__video" class="MediaPlayer__video">
+					<source src="./assets/video.mp4" />
+				</video>
+				<div class="MediaPlayer__controllers">
+					<button id="btn-play-pause" class="MediaPlayer__controllers__btn">
+						Play / Pause
+					</button>
+					<button id="btn-mute-inmute" class="MediaPlayer__controllers__btn">
+						Mute
+					</button>
+				</div>
+			</div>
+		</main>
+		<script type="module" src="./assets/index.js"></script>
+	</body>
+</html>
