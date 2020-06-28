@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Call Apply Bind</title>
+	</head>
+	<body>
+		<a href="/ejercicios/">Go back</a>
+		<p><em>Abre la consola</em></p>
+		<button class="button-page">A</button>
+		<button class="button-page">B</button>
+		<button class="button-page">C</button>
+		<script>
+			//Establece this usando call
+			function saludar() {
+				console.log(`hola soy ${this.name} ${this.apellido}`)
+			}
+
+			const juan = {
+				name: 'Juan',
+				apellido: 'García',
+			}
+
+			saludar.call(juan)
+
+			function caminar(metros, direccion) {
+				console.log(`${this.name} camina ${metros} metros hacia ${direccion}`)
+			}
+
+			caminar.call(juan, 400, 'Norte')
+
+			//Establece this usando apply
+			caminar.apply(juan, [800, 'Sur'])
+
+			//Establece this usando apply con valor
+			const valores = [800, 'Sur']
+			caminar.apply(juan, valores)
+
+			/* 
+        Call - comas
+        Apply - arreglo
+      */
+
+			//Establece this usando bind
+			const david = {
+				name: 'David',
+				apellido: 'Rincón',
+			}
+
+			const davidSaluda = saludar.bind(david)
+			davidSaluda()
+
+			// const davidCamina = caminar.bind(david, 2000, 'Norte')
+			// davidCamina()
+			const davidCamina = caminar.bind(david, 20000)
+			davidCamina('Norte')
+
+			//Cuando es util usar uno de estos metodos
+			const buttons = document.getElementsByClassName('button-page')
+			// buttons.forEach((button) => {
+			// 	buttons.onclick = () => alert('Hola Mundo')
+			// })
+
+			Array.prototype.forEach.call(buttons, (button) => {
+				button.onclick = () => alert('Hola Mundo')
+			})
+		</script>
+	</body>
+</html>
