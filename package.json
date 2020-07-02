@@ -1,15 +1,19 @@
 {
-  "name": "javascript-profesional",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "live-server"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "live-server": "^1.2.1"
-  }
+	"name": "javascript-profesional",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start": "parcel index.html ejercicios/index.html ejercicios/**/*html"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"parcel-bundler": "^1.12.4",
+		"typescript": "^3.9.6"
+	},
+	"browserslist": [
+		"last 1 Chrome version"
+	]
 }
